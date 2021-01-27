@@ -1,0 +1,9 @@
+#Initilize Git : Working area -> Staging Area--> Local Repo
+git init
+git config --global user.name "Faisal"
+git config --global user.email "fshamim2012@gmail.com"
+echo "My first file" >> file1.txt
+git add file1.txt / git add. --> add file from working area to staging 
+git status -- >will show untracked file 
+git commit -m "My 1st commit"
+git log and git log --oneline
