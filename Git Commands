@@ -7,3 +7,60 @@ git add file1.txt / git add. --> add file from working area to staging
 git status -- >will show untracked file 
 git commit -m "My 1st commit"
 git log and git log --oneline
+
+# git tag -- use to tag commit 
+
+Git add .
+#Stash is used to Shelve files 
+Git stash list -- Will show all shash files 
+Git stash pop --> Will retrive all shah files 
+git branch dev --: create dev bracnh
+git checkout dev
+git branch --> shows all branches
+git branch -D dev -- delete branch
+git cp file1.txt file2.txt -- > copy file1 to file 2
+# merge file 
+Use to to merge file from master to branch
+git merge master --> if you are in dev
+
+#Git Revert -- use 1 step back to revert changes 
+# git reset- --> use to discard all the changes after that commit 
+#Git diff --> used to see different b.w 2 files 
+alias graph='git log --oneline --decorate  --graph'
+mkdir repo1
+watch ls repo1
+
+
+#Initilize Git : Working area -> Staging Area--> Local Repo
+git init
+git config --global user.name "Faisal"
+git config --global user.email "fshamim2012@gmail.com"
+echo "My first file" >> file1.txt
+git add file1.txt / git add. --> add file from working area to staging 
+git status -- >will show untracked file 
+git commit -m "My 1st commit"
+git log and git log --oneline
+git tag -a v1.0 -m "My first tag for this project"
+git tag
+git show v1.0
+
+#generta Key
+ssh-keygen -t rsa
+Enter file in which to save the key (/root/.ssh/id_rsa): fassi.pub
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in fassi.pub
+cat fassi.pub.pub
+
+#Access remote Repo
+git branch -M main
+git remote add origin https://github.com/fshamim2020/repo7.git
+git push -u origin main
+
+#How to Pull from Remote to Local repo
+git pull https://github.com/fshamim2020/repo8.git
+cat file99 | wc -l
+
+#to find health
+heml repo list 
+
