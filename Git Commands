@@ -45,13 +45,6 @@ git tag -a v1.0 -m "My first tag for this project"
 git tag
 git show v1.0
 
-#generta Key
-ssh-keygen -t rsa
-Enter file in which to save the key (/root/.ssh/id_rsa): fassi.pub
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
-Your identification has been saved in fassi.pub
-cat fassi.pub.pub
 
 #Access remote Repo
 git branch -M main
@@ -65,3 +58,40 @@ cat file99 | wc -l
 #to find health
 heml repo list 
 
+# Http authenntication : Used following 2 methods
+1: To save credential , not to ask again while pushing
+git config credential.helper store
+stored in .git-credential
+credentials are stored in plain text at ~/.git-credentials. 
+cat ~/.git-credentials
+ls ~/.git-credentials
+rm ~/.git-credentials
+
+2: safest method is to cache
+git config credential.helper 'cache--timeout 300'
+
+# SSH key authentication 
+generta Key
+ssh-keygen -t rsa
+Enter file in which to save the key (/root/.ssh/id_rsa): fassi.pub
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in fassi.pub
+cat fassi.pub.pub
+Go to setting under Github
+Once added SSH key go to repo , copy ssh URL type following command 
+git clone git@github.com:fshamim2020/devops.git
+now switch to ls repo
+Permanently added the RSA host key for IP address '140.82.114.3' to the list of known hosts.
+
+Git reset soft/mixed/hard
+Soft: MOve files in staging area -- git reset --soft hash (will bring before files to staging)
+Mixed: Move files in working area -- git reset --mixed hash
+Hard . Permanetely reset changes -- git reset hard -- has (will discard all work, neither in staging nor in working)
+check
+git log --oneline
+ls 
+git status
+rm file.txt
+
+git push -f -- very severe command to reflect change to remote from local
