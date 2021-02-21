@@ -47,7 +47,8 @@ git show v1.0
 
 
 #Access remote Repo
-git branch -M main
+git branch -M main --> Tp puush in Main
+git branch -M br1  --> To push in branch
 git remote add origin https://github.com/fshamim2020/repo7.git
 git push -u origin main
 
@@ -78,6 +79,7 @@ Enter passphrase (empty for no passphrase):
 Enter same passphrase again: 
 Your identification has been saved in fassi.pub
 cat fassi.pub.pub
+cat ~/.ssh/id_rsa.pub
 Go to setting under Github
 Once added SSH key go to repo , copy ssh URL type following command 
 git clone git@github.com:fshamim2020/devops.git
